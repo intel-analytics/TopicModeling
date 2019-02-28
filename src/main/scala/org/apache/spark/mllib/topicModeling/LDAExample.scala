@@ -183,7 +183,7 @@ object LDAExample {
         optimizer.setAlphaAS(params.gibbsAlphaAS.toFloat)
         optimizer
       case _ =>
-        throw new IllegalArgumentException(s"available optimizers are em, online and gibbs, but got ${params.optimizer}")
+        throw new IllegalArgumentException(s"available optimizers are online and gibbs, but got ${params.optimizer}")
     }
   }
 
