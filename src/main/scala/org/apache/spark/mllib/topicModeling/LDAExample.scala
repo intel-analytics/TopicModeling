@@ -81,7 +81,7 @@ object LDAExample {
      stopwordFile: String = "",
      checkpointDir: Option[String] = None,
      checkpointInterval: Int = 10,
-     optimizer:String = "em",
+     optimizer:String = "gibbs",
      gibbsSampler:String = "alias",
      gibbsAlphaAS:Double = 0.1,
      gibbsPrintPerplexity:Boolean = false,
@@ -183,7 +183,7 @@ object LDAExample {
         optimizer.setAlphaAS(params.gibbsAlphaAS.toFloat)
         optimizer
       case _ =>
-        throw new IllegalArgumentException(s"available optimizers are em, online and gibbs, but got ${params.optimizer}")
+        throw new IllegalArgumentException(s"available optimizers are online and gibbs, but got ${params.optimizer}")
     }
   }
 
