@@ -81,7 +81,7 @@ object LDAExample {
      stopwordFile: String = "",
      checkpointDir: Option[String] = None,
      checkpointInterval: Int = 10,
-     optimizer:String = "em",
+     optimizer:String = "gibbs",
      gibbsSampler:String = "alias",
      gibbsAlphaAS:Double = 0.1,
      gibbsPrintPerplexity:Boolean = false,
